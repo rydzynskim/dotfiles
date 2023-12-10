@@ -1,0 +1,24 @@
+[user]
+        name = Mitch Rydzynski
+        email = mitch.rydzynski@gmail.com
+[init]
+        defaultbranch = main
+[branch]
+        autosetuprebase = always
+[pull]
+        ff = only
+[core]
+        ignorecase = true
+        editor = vim
+[url "https://"]
+        insteadOf = git://
+[alias]
+        s = status
+        b = branch
+        publish = push -u origin HEAD
+        pushf = push --force-with-lease
+        aa = add --all
+        c = commit
+        ca = commit --amend
+        sl = rebase -i HEAD~5
+        co = checkout
