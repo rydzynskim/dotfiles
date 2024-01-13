@@ -7,7 +7,7 @@ if [ -f ~/.secrets ]; then
   export $(grep 'FINNHUB_WEBHOOK' ~/.secrets | xargs)
   export $(grep 'MYSQL_PASSWORD' ~/.secrets | xargs)
   export $(grep 'OPENAI_API_KEY' ~/.secrets | xargs)
-  export $(grep 'OEDHD_API_KEY' ~/.secrets | xargs)
+  export $(grep 'EODHD_API_KEY' ~/.secrets | xargs)
 else
   echo 'Unable to export API keys because the ~/.secrets file does not exist.'
 fi
