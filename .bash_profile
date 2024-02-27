@@ -1,5 +1,6 @@
 # add necessary paths
 export PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
+export PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # export API keys
 if [ -f ~/.secrets ]; then
@@ -22,6 +23,9 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# cargo
+. "$HOME/.cargo/env"
 
 # cd into any dir in repos with tab completion and automatically switch node versions
 function r() {
