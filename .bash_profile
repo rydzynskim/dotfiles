@@ -9,6 +9,7 @@ if [ -f ~/.secrets ]; then
   export $(grep 'MYSQL_PASSWORD' ~/.secrets | xargs)
   export $(grep 'OPENAI_API_KEY' ~/.secrets | xargs)
   export $(grep 'EODHD_API_KEY' ~/.secrets | xargs)
+  export $(grep 'ODDS_API_KEY' ~/.secrets | xargs)
 else
   echo 'Unable to export API keys because the ~/.secrets file does not exist.'
 fi
