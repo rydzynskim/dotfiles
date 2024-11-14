@@ -47,6 +47,17 @@ r_completion() {
 }
 complete -o nospace -F r_completion r
 
+# tab completion on git branches
+branch_completion() {
+  local cur branches
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  branches=$(git branch | grep -v '\*' | sed 's/^[ *]*//')
+  COMPREPLY=( $(compgen -W "${branches}" -- "${cur}") )
+  return 0
+}
+complete -o nospace -F branch_completion git checkout
+complete -o nospace -F branch_completion git co
+
 # enables metal gpu support for tensorflow
 alias gpu='source ~/venv-metal/bin/activate'
 
